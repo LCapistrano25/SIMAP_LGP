@@ -407,6 +407,22 @@
   .footer-note{ font-size:.86rem; color:var(--ink-faint); max-width:44ch; }
   .footer-meta{ font-family:var(--font-mono); font-size:.78rem; color:var(--ink-faint); text-align:right; }
 
+  .footer-contact-wrap{ display:flex; flex-direction:column; gap:9px; align-items:flex-start; }
+  .footer-contact{
+    display:inline-flex; align-items:center; gap:9px;
+    border:1px solid var(--line); border-radius:999px;
+    padding:9px 18px 9px 13px;
+    background:var(--bg-raised);
+    font-family:var(--font-mono); font-size:.85rem; letter-spacing:.01em;
+    color:var(--ink-soft); text-decoration:none;
+    transition:color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+  }
+  .footer-contact svg{ width:18px; height:14px; flex:none; color:var(--ink-faint); transition:color .15s ease; }
+  .footer-contact:hover, .footer-contact:focus-visible{
+    color:var(--accent); border-color:var(--accent); box-shadow:var(--shadow); transform:translateY(-2px);
+  }
+  .footer-contact:hover svg, .footer-contact:focus-visible svg{ color:var(--accent); }
+
   /* ===== svg diagram base ===== */
   .diagram text{ font-family:var(--font-body); fill:var(--ink); }
   .diagram .mono-label{ font-family:var(--font-mono); }
@@ -894,6 +910,16 @@
     <div class="footer-brand">
       <svg class="logo"><use href="#logo-mark"></use></svg>
       <p class="footer-note">SIMAP é um sistema de uso interno, mantido pela própria empresa. Esta página é uma apresentação do sistema — não é um ambiente de acesso.</p>
+    </div>
+    <div class="footer-contact-wrap">
+      <span class="panel-label">fale com o time</span>
+      <a class="footer-contact" href="mailto:arthurantonio060905@gmail.com">
+        <svg viewBox="0 0 20 16" aria-hidden="true">
+          <rect x="1" y="1" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+          <polyline points="1,2.5 10,9.5 19,2.5" fill="none" stroke="currentColor" stroke-width="1.6"></polyline>
+        </svg>
+        <span>arthurantonio060905@gmail.com</span>
+      </a>
     </div>
     <div class="footer-meta">SISTEMA DE MAPEAMENTO DE PROCESSOS</div>
   </div>
